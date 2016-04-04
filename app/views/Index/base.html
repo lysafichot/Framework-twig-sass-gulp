@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% block head %}
+			{% block stylesheets %}
+			<link rel="stylesheet" type="text/css" href="../app/views/assets/css/style.css">
+			<link rel="stylesheet" href="../app/views/assets/css/reset.css">
+		<!-- 	 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+			<link rel="stylesheet" href="assets/css/reset.css"> -->
+			{% endblock %}
+		<title>{% block title %}{% endblock %} - My Framework</title>
+		{% endblock %}
+	</head>
+	<body>
+	{% block sidebar %}
+	<!-- <a href="#" class="logo"><img src="" alt="logo"></a> -->
+	<nav class="nav-container">
+		<ul class="nav">
+			<li class="nav-selected"><a href="http://localhost/PHP_Avance_my_framework/public/user/index">Acceuil</a></li>
+			<li><a href="#">Login</a></li>
+			<li><a href='http://localhost/PHP_Avance_my_framework/public/user/sign'>Sign up</a></li>
+		</ul>
+	</nav>
+	{% endblock %}
+		<div id="content">{% block content %}{% endblock %}</div>
+		<div id="footer">
+			{% block footer %}
+
+			{% endblock %}
+		</div>
+		{% block js %}
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<script src="assets/js/main.js"></script>
+		{% endblock %}
+	</body>
+</html>

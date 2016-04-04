@@ -1,0 +1,32 @@
+body, html {
+  height: 100%; }
+
+nav, #footer {
+  height: 10%;
+  width: 100%;
+  background-image: -webkit-linear-gradient(#2C2828 0, #000000 50%, #2C2828 100%);
+  background-image: linear-gradient(to   , #000000 50%, #2C2828 100%); }
+
+body {
+  background-image: -webkit-linear-gradient(#F8F7F7 0, #E6E3E3 50%, #E6E3E3 50%);
+  background-image: linear-gradient(to   , #E6E3E3 50%, #E6E3E3 50%); }
+
+.nav {
+  margin: 15px;
+  float: right; }
+  .nav li {
+    display: block;
+    float: left; }
+  .nav li::after {
+    content: '|';
+    color: #F2EFEF; }
+  .nav li:last-child::after {
+    content: ''; }
+  .nav a {
+    margin: 10px;
+    color: #F2EFEF;
+    text-decoration: none;
+    font-variant: small-caps; }
+
+#content {
+  height: 80%; }

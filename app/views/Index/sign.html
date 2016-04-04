@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block sidebar %}
+<!-- <a href="#" class="logo"><img src="" alt="logo"></a> -->
+{{ parent() }}
+{% endblock %}
+
+{% block content %}
+{% import "forms.html" as forms %} <!-- input -->
+
+<div class="sign_container">
+<form action="sign" method="post">
+<p>{{ forms.input('user_username') }}</p>
+<p>{{ forms.input('user_password') }}</p>
+<p>{{ forms.input('user_email') }}</p>
+
+<p>{{ forms.input('user_sign', 'Envoyer', 'submit') }}</p>
+</div>
+</form>
+{% endblock %}
+{% block flashes %}
+
+
+{% endblock %}

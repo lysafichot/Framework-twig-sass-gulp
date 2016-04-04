@@ -1,0 +1,36 @@
+@import "bourbon/bourbon";
+body, html {
+	height: 100%;
+}
+nav, #footer {
+	height: percentage(10/100);
+	width: 100%;
+	@include background-image(linear-gradient(#2C2828 0, #000000 50%, #2C2828 100%));
+}
+body {
+	@include background-image(linear-gradient(#F8F7F7 0, #E6E3E3 50%, #E6E3E3 50%));
+}
+.nav {
+	margin: 15px;
+	float: right;
+	li {
+		display: block;
+		float: left;
+	}
+	li::after {
+	content: '|';
+	color: #F2EFEF;
+	}
+	li:last-child::after {
+		content: '';
+	}
+		a {
+			margin: 10px;
+			color: #F2EFEF;
+			text-decoration: none;
+			font-variant: small-caps;
+		}
+}
+#content {
+	height: 80%;
+}

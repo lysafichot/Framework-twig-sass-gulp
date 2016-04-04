@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block head %}
+			{% block stylesheets %}
+			<link rel="stylesheet" type="text/css" href="../app/views/assets/css/style.css">
+<!-- 			<link rel="stylesheet" href="../app/views/assets/css/reset.css">
+ -->		<!-- 	 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+			<link rel="stylesheet" href="assets/css/reset.css"> -->
+			{% endblock %}
+		<title>{% block title %}{% endblock %} - My Framework</title>
+		{% endblock %}
+
+
+{% block content %}
+<h1>Members</h1>
+<ul>
+    {% for user in users %}
+        <li>{{ user.username|e }}</li>
+    {% endfor %}
+</ul>
+
+
+	<p>firstname : {{ users.firstname }}<p>
+	<p>lastname : {{ users.lastname }}</p>
+	username : {{ users.username }}<br />
+	email : {{ users.email }}
+
+	<p>{{ forms.input('username') }}</p>
+
+{% endblock %}
+{% block flashes %}
+
+
+{% endblock %}
